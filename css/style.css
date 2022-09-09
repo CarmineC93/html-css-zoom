@@ -48,8 +48,9 @@ a, p{
     width: 90%;
     margin: 0 auto;
     padding: 4.5em 0 1em;
-    /* max-width: 1200px;     */
-    max-height: 100%;
+    /* max-width: 1200px;  */
+    /* max-height: 100%;  quando streccio la row non diminuisce l'altezza essendo la minima del 100%, rispetto alla galleria, con max-height invece la griglia non aumentava. */
+    height: 100%; /*con min-height invece che height, strecciando la pagina le icone non restano fisse e si dispongono meglio*/ 
     flex-wrap: wrap;
     gap:  8px 5px;
     justify-content: space-between;
@@ -61,14 +62,14 @@ a, p{
     color: white;
     width: calc(100% / 7 - 5px);
     position: relative;
+    min-width: 50px;
 }
 
 .name{
     position: absolute;
     left: 0;
-    bottom: 0.5em;
+    bottom: 1.2em;
     background-color: rgba(240, 255, 255, 0.646);
-    max-width: 90%;
     max-height: 50%;
 }
 
