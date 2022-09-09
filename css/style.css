@@ -10,14 +10,15 @@
 html{
     font-family: 'Roboto', sans-serif;
 }
-
-main{
-    width: 100%;
+                 /* normalmente non si settano le altezza in un sito classico, questa però è una web app */
+main{       /*meglio non toccare il main e aggiungere un div wrapper che contenga il tutto */
+    width: 100%;       
     height: 100vh;
 }
 
 img{
     max-width: 100%;
+    display: block;  /* per non far apparire la linea sotto l'immagine nel div screen */
 }
 
 .flex{
@@ -50,19 +51,21 @@ a, p{
     padding: 4.5em 0 1em;
     /* max-width: 1200px;  */
     /* max-height: 100%;  quando streccio la row non diminuisce l'altezza essendo la minima del 100%, rispetto alla galleria, con max-height invece la griglia non aumentava. */
-    height: 100%; /*con min-height invece che height, strecciando la pagina le icone non restano fisse e si dispongono meglio*/ 
+    height: 100%; 
     flex-wrap: wrap;
     gap:  8px 5px;
     justify-content: space-between;
-    overflow: hidden;
- 
+    overflow: auto;
+
 }
 
 .screen{
     color: white;
-    width: calc(100% / 7 - 5px);
     position: relative;
     min-width: 50px;
+    width: calc(100% / 7 - 5px);     /*ci stava bene un div "col" cui dare altezza così che gli "screen" non avessero altre prorietà */
+
+
 }
 
 .name{
@@ -119,6 +122,7 @@ gap: 0.7em;
     background-color: grey;
     line-height: 60px;
     min-width: 10em ;
+    cursor: pointer;
 }
 
 .toolbar div{
